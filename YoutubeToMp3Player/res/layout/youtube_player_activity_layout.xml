@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <com.google.android.gms.ads.AdView android:id="@+id/adView"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="5dip"
+                           ads:adSize="BANNER"
+                           ads:adUnitId="ca-app-pub-8722652440187933/5934214408"/>
+    
+    <fragment
+        android:id="@+id/youtube_fragment"
+        android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip" />
+    
+    <LinearLayout 
+        android:id="@+id/youtube_convert_progress"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="gone">
+        
+        <ProgressBar 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:text="@string/youtube_download_convert_description"
+            android:textSize="13sp"/>
+        
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.busungg.youtubetomp3player.view.YoutubeExpandableListView
+            android:id="@+id/youtube_expandable_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+
+        <ProgressBar
+            android:id="@+id/youtube_expandable_empty_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+        
+        <Button 
+            android:id="@+id/youtube_expandable_request_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/refresh_icon"
+            android:text="@string/expandable_refresh_text"
+            android:textSize="8sp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+    
+    <WebView
+        android:id="@+id/youtube_convert_webview"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:visibility="gone" />
+
+    <WebView
+        android:id="@+id/youtube_download_webview"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:visibility="gone" />
+
+</LinearLayout>

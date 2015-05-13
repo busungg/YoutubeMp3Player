@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dip" >
+    
+    <com.google.android.gms.ads.AdView android:id="@+id/adView"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_alignParentTop = "true"
+                           android:layout_marginBottom="5dip"
+                           ads:adSize="BANNER"
+                           ads:adUnitId="ca-app-pub-8722652440187933/2927362409"/>
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below = "@id/adView"
+        android:gravity="center_vertical"
+        android:padding="10dip">
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/search_pointer"/>
+
+        <EditText
+            android:id="@+id/search_edittext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/search_button"
+            android:background="@drawable/edittext_drawable"/>
+    </RelativeLayout>
+
+    <com.busungg.youtubetomp3player.view.CheckMenuView
+        android:id="@+id/check_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/check_menu"
+        android:layout_below="@id/search_layout"
+        android:padding="10dip"
+        android:background="@drawable/custom_background">
+
+        <com.busungg.youtubetomp3player.view.YoutubeListView
+            android:id="@+id/youtube_list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+
+        <TextView
+            android:id="@+id/empty_list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/empty_list"
+            android:textColor="#555555" />
+
+        <ProgressBar
+            android:id="@+id/youtube_list_search_progress_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

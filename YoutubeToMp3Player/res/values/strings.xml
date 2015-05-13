@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">YoutubeToMp3Player</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    
+    <!-- 리스트 관련 스트링 -->
+    <string name="empty_list">No list\nPlease search</string>
+    
+    <!-- 유투브 에러 -->
+	<string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+	
+	<!-- Pull to Refresh -->
+	<string name="pull_to_refresh_loading">LOADING YOUTUBE</string>
+	
+	<!-- check list -->
+	<string name="check_youtube_text">List</string>
+	<string name="check_info_text">Info</string>
+	
+	<!-- youtube list -->
+	<string name="list_viewcount_text">Viewcount:&#160;</string>
+	<string name="list_upload_text">Uploaded:&#160;</string>
+	
+	<!-- youtube expandablelist -->
+	<string name="expandable_upload_text">Uploaded:&#160;</string>
+	<string name="expandable_category_text">Category:&#160;</string>
+	<string name="expandable_refresh_text">Refresh</string>
+	<string name="expandable_convert_text">Convert</string>
+	<string name="expandable_download_text">Download</string>
+	
+	<!-- youtube download alert -->
+	<string name="youtube_download_convert_finish_description">Convert Finish</string>
+	<string name="youtube_download_convert_description">Converting... Please wait</string>
+	<string name="youtube_download_convert_error_title">Alert</string>
+	<string name="youtube_download_convert_error_description">Please convert youtube video to mp3</string>
+	<string name="youtube_download_error_title">Error</string>
+	<string name="youtube_download_error_description">Can\'t Download</string>
+	<string name="youtube_download_ok_text">YES</string>
+	<string name="youtube_download_no_text">NO</string>
+	<string name="youtube_download_alert_text">Do you want to download?</string>
+
+	<!-- youtube setting -->
+	<string name="setting_title_provision">Provision</string>
+	<string name="setting_text_provision">
+	    1.If you download converted mp3 we will collect your download history.
+	    \n\n2.If author of the videos request download information we will give information and you are responsible for problems about copyright</string>
+	    
+	<string name="setting_title_about_app">About APP</string>
+	<string name="setting_text_about_app">
+	    1.Convert Youtube videos to mp3 and download for free
+	    \n\n2.We use http://www.youtube-mp3.org for convert
+	    \n\n3.Producer : FUNNY DEVELOPER
+	    \n\n4.Email : If you have any problems, please email;busungg@gmail.com</string>
+</resources>
